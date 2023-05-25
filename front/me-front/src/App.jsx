@@ -6,7 +6,7 @@ const ShoppingPage = () => {
   const [cart, setCart] = useState([]);
 
    useEffect(()=>{
-    fetch('http://localhost:5000/attractions').then(res=> res.json()).then(result => {console.log(result)
+    fetch('http://3.24.169.174:5000/attractions').then(res=> res.json()).then(result => {console.log(result)
   setItems(result)})
    })
 
@@ -19,8 +19,7 @@ const ShoppingPage = () => {
       <ul>
         {items.map((item) => (
           <li key={item.id}>
-            
-
+          
             <img src={item.coverimage} alt={item.name} />
             <p>{item.name}</p>
             <p>{item.detail}</p>
